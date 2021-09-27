@@ -43,7 +43,6 @@ header {
 .banner .f3_logo {
   position: absolute;
   bottom: 50px;
-  align-self: flex-end;
 }
 
 .banner .f3_cup {

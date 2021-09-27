@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
 }
+
 header {
   display: flex;
   justify-content: center;
   margin-top: 5vh;
   overflow: hidden;
 }
+
 .banner {
   display: flex;
   justify-content: center;
@@ -17,51 +19,61 @@ header {
   border: 2px solid #000;
   position: relative;
 }
+
 .banner .img {
   opacity: 0;
 }
+
 .banner .img:first-child {
   opacity: 1;
 }
+
 .banner .frame_2 {
   position: absolute;
   z-index: 2;
 }
+
 .banner .f3_bubbles {
   position: absolute;
   bottom: 30px;
   align-self: flex-end;
   z-index: 1;
 }
+
 .banner .f3_logo {
   position: absolute;
   bottom: 50px;
-  align-self: flex-end;
 }
+
 .banner .f3_cup {
   position: absolute;
   bottom: 10px;
 }
+
 .banner .f3_copy1 {
   position: absolute;
   top: 20px;
   left: 160px;
 }
+
 .banner .f3_copy2 {
   position: absolute;
   top: 50px;
   left: 162px;
 }
+
 .banner .f4_copy1 {
   position: absolute;
   top: 20px;
   left: 141px;
 }
+
 .banner .f4_copy2 {
   position: absolute;
   top: 20px;
   right: 238px;
 }
+
 .banner .cta {
   position: absolute;
   top: 210px;
