@@ -35,38 +35,46 @@
 
         <img
           src="images/f3_copy1.png"
-          alt="Display text"
+          alt="Craft banners are"
           class="img f3_copy1"
         />
 
         <img
           src="images/f3_copy2.png"
-          alt="Display text"
+          alt="super refreshing!"
           class="img f3_copy2"
         />
 
         <!-- Frame 4 -->
-        <img
-          src="images/f4_copy1.png"
-          alt="Display text"
-          class="img f4_copy1"
-        />
+        <img src="images/f4_copy1.png" alt="#SUPER" class="img f4_copy1" />
 
-        <img
-          src="images/f4_copy2.png"
-          alt="Display text"
-          class="img f4_copy2"
-        />
+        <img src="images/f4_copy2.png" alt="FRESH" class="img f4_copy2" />
 
         <img
           src="images/f4_cta.png"
           alt="Call to Action"
           class="img cta"
           onclick="nav_to_craft()"
+          onmouseover="mouse_over()"
+          onmouseout="mouse_out()"
         />
       </div>
     </header>
 
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyC-e7yo2KNoQUx3tDKM5CPj7DZXizxR7UQ",
+        authDomain: "craft-banner-test.firebaseapp.com",
+        projectId: "craft-banner-test",
+        storageBucket: "craft-banner-test.appspot.com",
+        messagingSenderId: "98341169581",
+        appId: "1:98341169581:web:eba6e27275000253709924"
+      };
+
+      const app = initializeApp(firebaseConfig);
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="main.js"></script>
   </body>

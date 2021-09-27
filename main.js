@@ -1,7 +1,20 @@
-const tl = gsap.timeline({
-  repeat: -1,
-  repeatDelay: 5
-});
+const tl = gsap.timeline();
+
+const mouse_over = () => {
+  gsap.to(".cta", {
+    duration: 0.5,
+    scale: 1.2,
+    ease: "circ.out"
+  });
+};
+
+const mouse_out = () => {
+  gsap.to(".cta", {
+    duration: 0.5,
+    scale: 1,
+    ease: "circ.out"
+  });
+};
 
 const nav_to_craft = () => {
   window.open("https://craftww.com/", "_blank").focus();
@@ -16,14 +29,7 @@ tl.from(".f1_logo", {
   autoAlpha: 0,
   scale: 0.3,
   ease: "circ.out",
-  boxShadow: "120px 80px 40px 20px #0ff",
-  onStart: () => {
-    bubbles.pause().set(".f3_bubbles", {
-      autoAlpha: 0,
-      opacity: 0,
-      ease: "circ.out"
-    });
-  }
+  boxShadow: "120px 80px 40px 20px #0ff"
 });
 
 /* FRAME 2 */
@@ -45,7 +51,7 @@ tl.to(".f1_logo", {
 /* FRAME 3 */
 // "Cup shrinks down to smaller size. Bubbles start to animate. The two lines of copy come in from the right with the second line starting slightly after the first."
 
-// Bubble effect defined and paused
+// Bubble effect defined and paused, then played upon the smaller cup rendering
 const bubbles = gsap.timeline({ repeat: -1, paused: true });
 
 bubbles
@@ -87,7 +93,6 @@ tl.to(".frame_2", {
   "-=1"
 );
 
-// TODO: Delete to make room
 // Copy enters and exits
 tl.to(".f3_copy1, .f3_copy2", {
   duration: 1,
@@ -113,7 +118,6 @@ tl.to(".f3_copy1, .f3_copy2", {
 /* FRAME 4 */
 // "The two lines of copy from Frame 3 exit to the left, with second line leaving a bit behind the first. The two words, making up the hashtag, come in from opposite sides at same time, as the cup slides up. CTA animates in and should grow/shrink slightly upon rollover/rollout."
 
-// TODO: Delete to make room
 // Frame 4 copy enters from both sides simultaneously
 tl.fromTo(
   ".f4_copy1",
@@ -146,7 +150,6 @@ tl.fromTo(
   "-=1"
 );
 
-// TODO: Delete to make room
 // Cup moves slightly upward to make room for call to action
 tl.to(
   ".f3_cup, .f3_logo",
